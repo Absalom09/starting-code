@@ -11,9 +11,9 @@
   --secondary: #f2ecff;
   --success: #5af04c;
   --warning: #f72585;
-  --container: linear-gradient(to right, #0919fd, #4fd6ee, #35ff68);
+  --container: linear-gradient(to right, #719196, #4fd6ee, #1f777a);
   --info: #ffffff;
-  --light:linear-gradient(to bottom, #0919fd, #4ecad3, #7c1616, #1909fd, #4ecad3, #7c1616, #2e09fd, #4ecad3, #7c1616, #3e09fd, #4ecad3, #7c1616);
+  --light:radial-gradient(#719196, #4ecad3, #1f777a, #719196, #4ecad3, #1f777a);
   --card-bg: rgba(255, 255, 255, 0.85);;
   --dark: #212529;
   --gray: #6c757d;
@@ -21,8 +21,8 @@
   --white: #ffffff;
   --card-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
-  --body-bg: linear-gradient(to bottom, #0919fd, #4ecad3, #7c1616, #1909fd, #4ecad3, #7c1616, #2e09fd, #4ecad3, #7c1616, #3e09fd, #4ecad3, #7c1616);
-  --card-bg: rgba(255, 255, 255, 0.85);
+  --body-bg: radial-gradient( #719196, #4ecad3, #1f777a, #719196, #4ecad3, #1f777a);
+  --card-bg: #4ecad3;
   --text-color: #353232;
   --border-color: #e9ecef;
   --radius: 14px;
@@ -46,9 +46,11 @@ body {
   padding: 20px;
   background: var(--container);
   border-radius: var(--radius);
-  border-top: var(--border-color) solid 3px;
-  border-bottom: var(--border-color) solid 3px;
-  border-right: var(--border-color) solid 3px;
+  border-top: var(--border-color) solid 2px;
+  border-bottom: var(--border-color) solid 9px;
+  border-right: var(--border-color) solid 7px;
+  box-shadow: 15px 15px 10px #1e1e2f;
+
 }
 
 header {
@@ -73,7 +75,7 @@ h1  {
 
 
 h2 {
-  color: var(--secondary);
+  color: var(--primary);
   margin: 30px 0 15px;
   padding-bottom: 10px;
   border-bottom: 2px solid var(--light-gray);
@@ -327,6 +329,18 @@ p {
   flex-direction: column;
   gap: 8px;
   margin-bottom: 18px;
+}
+.form-group ::placeholder{
+  font-family: "Poppins", sans-serif;
+  color: var(--gray);
+  text-align: center;
+  
+}
+.form-select{
+  font-family: "Poppins", sans-serif;
+  /*color: var(--gray);*/
+  text-align: center;
+  
 }
 .form-label {
   font-weight: 600;
